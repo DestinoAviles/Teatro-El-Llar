@@ -267,3 +267,1095 @@
   .card .desc{font-size:.88rem;color:var(--ink-soft);flex:1}
   .card-foot{display:flex;align-items:center;gap:8px;margin-top:4px}
   .tag{
+    font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;
+    background:color-mix(in srgb, var(--tipo, var(--purple)) 14%, #fff);
+    color:var(--tipo, var(--purple));
+    border:1.5px solid color-mix(in srgb, var(--tipo, var(--purple)) 45%, #fff);
+    padding:4px 10px;border-radius:999px;
+  }
+  .card-actions{margin-left:auto;display:flex;gap:6px}
+  .icon-btn{
+    width:36px;height:36px;border-radius:50%;border:2px solid #d9c9a3;background:#fff;
+    font-size:1rem;display:grid;place-items:center;transition:.15s;
+  }
+  .icon-btn:hover{transform:scale(1.08)}
+  .icon-btn.on{background:var(--gold);border-color:var(--gold);box-shadow:0 2px 0 #b08a12}
+  .btn-mini{
+    border:2px solid var(--purple);color:var(--purple);border-radius:999px;
+    padding:6px 12px;font-weight:800;font-size:.78rem;
+  }
+  .btn-mini:hover{background:var(--purple);color:#fff}
+
+  /* ---------- CARTELERA ---------- */
+  .cartelera{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+  .day-col{
+    background:var(--paper);border:2px solid #e4d6b4;border-radius:var(--radius);
+    box-shadow:var(--shadow);overflow:hidden;
+  }
+  .day-head{padding:14px 16px;color:#fff}
+  .day-col.sab .day-head{background:linear-gradient(135deg,var(--red),#8e1c1c)}
+  .day-col.dom .day-head{background:linear-gradient(135deg,var(--purple),var(--purple-dark))}
+  .day-head h3{font-family:Georgia,serif;font-size:1.2rem;text-transform:uppercase}
+  .day-head .meta{font-size:.82rem;opacity:.92;margin-top:2px}
+  .day-head .pres{font-size:.8rem;margin-top:8px;background:rgba(255,255,255,.15);padding:6px 10px;border-radius:10px}
+  .day-list{list-style:none;padding:10px 12px 14px;display:flex;flex-direction:column;gap:6px}
+  .day-list li{
+    display:flex;gap:10px;align-items:center;
+    padding:9px 10px;border-radius:12px;background:#fff;border:1.5px solid #eee2c6;
+    cursor:pointer;transition:.15s;
+  }
+  .day-list li:hover{border-color:var(--purple);transform:translateX(3px)}
+  .order{
+    flex:0 0 34px;height:34px;border-radius:50%;display:grid;place-items:center;
+    font-weight:900;color:#fff;font-size:.85rem;background:var(--tipo, var(--purple));
+  }
+  .order.star{background:var(--gold);color:#3a2c05}
+  .day-list .nm{font-weight:800;font-size:.92rem;text-transform:uppercase;line-height:1.15}
+  .day-list .pp{font-size:.78rem;color:var(--ink-soft)}
+  .day-empty{padding:18px;color:var(--ink-soft);text-align:center;font-style:italic}
+
+  /* ---------- EMPTY ---------- */
+  .empty{
+    text-align:center;padding:44px 18px;background:var(--paper);
+    border:2px dashed #d9c9a3;border-radius:var(--radius);
+  }
+  .empty .big{font-size:2.6rem}
+  .empty h3{font-family:Georgia,serif;margin:8px 0 6px}
+  .empty p{color:var(--ink-soft);margin-bottom:14px}
+
+  /* ---------- CARTELES TAB ---------- */
+  .poster-controls{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:18px}
+  .posters{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+  figure.poster{
+    background:var(--paper);padding:14px;border-radius:var(--radius);
+    border:2px solid #e4d6b4;box-shadow:var(--shadow);margin:0;
+  }
+  figure.poster img{
+    width:100%;border-radius:10px;display:block;cursor:zoom-in;
+    border:1px solid #e4d6b4;
+  }
+  figure.poster figcaption{
+    text-align:center;font-weight:800;margin-top:10px;font-family:Georgia,serif;
+  }
+  figure.poster figcaption small{display:block;font-weight:600;color:var(--ink-soft);font-family:inherit}
+  .poster-tag{display:inline-block;font-size:.7rem;font-weight:900;letter-spacing:.06em;padding:3px 10px;border-radius:999px;color:#fff;margin-bottom:6px}
+  .poster-tag.sab{background:var(--red)}
+  .poster-tag.dom{background:var(--purple)}
+
+  /* ---------- INFO TAB ---------- */
+  .info-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .info-card{
+    background:var(--paper);border:2px solid #e4d6b4;border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:20px;
+  }
+  .info-card h3{
+    font-family:Georgia,serif;text-transform:uppercase;margin-bottom:10px;
+    display:flex;align-items:center;gap:8px;
+  }
+  .info-card p, .info-card li{font-size:.95rem;color:var(--ink-soft)}
+  .info-card ul{margin:8px 0 0 18px;display:flex;flex-direction:column;gap:6px}
+  .info-card .hl{color:var(--ink);font-weight:800}
+  .ticket{
+    background:linear-gradient(135deg,#fff8e2,#ffe9a8);
+    border:2px dashed var(--gold);
+  }
+  .info-slogans{
+    margin-top:18px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;
+  }
+  .slogan{
+    background:var(--night);color:var(--gold);border-radius:999px;
+    padding:9px 18px;font-family:Georgia,serif;font-style:italic;
+  }
+  .place{margin-top:8px;display:flex;align-items:center;gap:10px}
+  .logo-cvn{
+    background:#fff;border:2px solid var(--red);color:var(--red);
+    font-weight:900;text-align:center;border-radius:8px;padding:8px 12px;line-height:1.1;
+    font-size:.75rem;letter-spacing:.04em;
+  }
+  .logo-cvn .ayto{color:#333;font-size:.62rem;display:block;border-bottom:1px solid var(--red);padding-bottom:3px;margin-bottom:3px}
+
+  /* ---------- MODAL ---------- */
+  .overlay{
+    position:fixed;inset:0;background:rgba(20,14,32,.65);z-index:100;
+    display:grid;place-items:center;padding:18px;
+  }
+  .modal{
+    background:var(--paper);border-radius:20px;border:3px solid var(--gold);
+    max-width:640px;width:100%;max-height:88vh;overflow:auto;
+    padding:26px 24px;box-shadow:0 30px 60px rgba(0,0,0,.45);position:relative;
+  }
+  .modal .close{
+    position:absolute;top:12px;right:12px;width:38px;height:38px;border-radius:50%;
+    background:var(--red);color:#fff;font-weight:900;font-size:1.05rem;
+    box-shadow:0 3px 0 #8e1c1c;
+  }
+  .modal h2{font-family:Georgia,serif;text-transform:uppercase;padding-right:44px;line-height:1.1}
+  .modal .papel{color:var(--purple);font-weight:700;font-style:italic;margin-top:4px}
+  .modal .modal-badges{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
+  .modal .desc{color:var(--ink-soft);margin-bottom:14px}
+  .modal h4{
+    text-transform:uppercase;letter-spacing:.08em;font-size:.75rem;color:var(--ink-soft);
+    margin:16px 0 8px;border-bottom:2px solid #e4d6b4;padding-bottom:4px;
+  }
+  .act-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+  .act-list li{
+    display:flex;gap:10px;align-items:center;background:#fff;border:1.5px solid #eee2c6;
+    border-radius:12px;padding:10px 12px;
+  }
+  .modal-foot{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+  .modal img.lightbox-img{width:100%;border-radius:12px;display:block}
+
+  footer{
+    text-align:center;padding:26px 14px 34px;color:var(--ink-soft);font-size:.85rem;
+    border-top:3px solid var(--gold);background:rgba(255,253,246,.8);
+  }
+  footer b{color:var(--purple)}
+
+  @media (max-width:640px){
+    .field{min-width:100%}
+    .toolbar-row{align-items:stretch}
+  }
+  @media print{
+    .tabs,.toolbar,.card-actions,.poster-controls,footer .btn,.countdown{display:none !important}
+    .tab-panel{display:block !important}
+    body{background:#fff}
+    .card,.day-col{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-kicker">Gala de Cumpleañu · Corvera de Asturias</div>
+  <h1>Teatru <span class="llar">El Llar</span><br>25 Años Contigu!</h1>
+  <div class="hero-25"><span class="num">25</span> años contigu!</div>
+  <p class="hero-sub">Programa interactivo de las dos galas de cumpleañu: sábadu 26 y domingu 27 de setiembre de 2026, les dos a les 19h. Filtra, busca y descubre quién actúa. <i>¡Que viva el teatru!</i></p>
+  <div class="hero-stats" id="hero-stats"></div>
+  <div class="countdown" id="countdown" aria-live="polite"></div>
+</header>
+
+<nav class="tabs" role="tablist">
+  <button class="tab-btn active" data-tab="programa" role="tab">🎭 Programa</button>
+  <button class="tab-btn" data-tab="carteles" role="tab">🖼️ Carteles</button>
+  <button class="tab-btn" data-tab="info" role="tab">🎟️ Entradas ya info</button>
+  <span class="cd-mini" id="cd-mini">⏳ …</span>
+</nav>
+
+<main>
+  <!-- ===================== PROGRAMA ===================== -->
+  <section id="view-programa" class="tab-panel">
+    <div class="toolbar">
+      <div class="toolbar-row">
+        <div class="search-wrap">
+          <span class="ico">🔎</span>
+          <input id="q" type="search" placeholder="Buscar actuación, artista o estilu… (p. ej. gaita, soprano, magu)" autocomplete="off">
+          <button class="q-clear hidden" id="q-clear" title="Borrar búsqueda">✕</button>
+        </div>
+        <div class="field">
+          <label for="sel-gala">Gala</label>
+          <select id="sel-gala">
+            <option value="todes">Todas les galas</option>
+            <option value="sab">Solo sábadu 26</option>
+            <option value="dom">Solo domingu 27</option>
+            <option value="dambas">Nes dos galas</option>
+            <option value="exclusivos">Exclusivos d'una gala</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="sel-tipo">Tipu d'actuación</label>
+          <select id="sel-tipo">
+            <option value="todes">Tolos tipos</option>
+            <option value="tradicional">Gaita y tradición</option>
+            <option value="banda">Bandas y charangas</option>
+            <option value="coral">Corales</option>
+            <option value="voz">Voz y cantantes</option>
+            <option value="showman">Showman y variedaes</option>
+            <option value="magia">Maxa</option>
+            <option value="homenaje">Homenaxes y orquestes</option>
+            <option value="grupo">Grupos y espectáculos</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="sel-orden">Ordenar por</label>
+          <select id="sel-orden">
+            <option value="cartel">Orden del cartel (sáb → dom)</option>
+            <option value="az">Alfabéticu (A–Z)</option>
+            <option value="za">Alfabéticu (Z–A)</option>
+            <option value="tipo">Tipu d'actuación</option>
+            <option value="galas">Más galas primero</option>
+          </select>
+        </div>
+      </div>
+      <div class="toolbar-row">
+        <div class="chips" id="chips-gala">
+          <span class="lbl">Atayos:</span>
+          <button class="chip active" data-gala="todes">Todas</button>
+          <button class="chip" data-gala="sab">Sábadu 26</button>
+          <button class="chip" data-gala="dom">Domingu 27</button>
+          <button class="chip" data-gala="dambas">Nes dos galas</button>
+          <button class="chip" data-gala="exclusivos">Exclusivos</button>
+        </div>
+      </div>
+      <div class="toolbar-row">
+        <div class="chips">
+          <span class="lbl">Vista:</span>
+          <div class="view-toggle">
+            <button class="chip active" data-vista="fiches">🗂️ Fiches</button>
+            <button class="chip" data-vista="cartelera">📋 Cartelera por gala</button>
+          </div>
+        </div>
+        <div class="spacer"></div>
+        <button class="chip fav" id="btn-favs">★ Los meos marcaos</button>
+        <button class="btn btn-outline" id="btn-limpiar">🧽 Llimpiar filtros</button>
+        <button class="btn btn-red" id="btn-pdf">📄 Exportar PDF</button>
+        <button class="btn btn-green" id="btn-print">🖨️ Imprimir</button>
+      </div>
+    </div>
+
+    <div class="count-bar" id="count-bar"></div>
+
+    <div id="fiches" class="grid"></div>
+    <div id="cartelera" class="cartelera hidden"></div>
+    <div id="empty" class="empty hidden">
+      <div class="big">🪗</div>
+      <h3>Nun s'atopó nenguna actuación</h3>
+      <p>Prueba a cambiar los filtros o a borrar la búsqueda. <br>¡El teatru también ye tuyu!</p>
+      <button class="btn btn-purple" id="btn-empty-reset">Llimpiar los filtros</button>
+    </div>
+  </section>
+
+  <!-- ===================== CARTELES ===================== -->
+  <section id="view-carteles" class="tab-panel hidden">
+    <div class="poster-controls chips" style="justify-content:center">
+      <span class="lbl">Ver cartelu:</span>
+      <button class="chip active" data-poster="dambos">Los dos</button>
+      <button class="chip" data-poster="sab">Sábadu 26</button>
+      <button class="chip" data-poster="dom">Domingu 27</button>
+    </div>
+    <div class="posters">
+      <figure class="poster" id="poster-sab">
+        <span class="poster-tag sab">Gala Sábadu 26</span>
+        <img src="img/gala_sabado_26.jpg" alt="Cartel Gala Sábadu 26 de setiembre de 2026 — Teatru El Llar 25 años">
+        <figcaption>Gala Sábadu 26 de setiembre de 2026, 19h
+          <small>Presenten: María Cueto y Pedro Durán · Fai clic na imaxe pa vela en grande</small>
+        </figcaption>
+      </figure>
+      <figure class="poster" id="poster-dom">
+        <span class="poster-tag dom">Gala Domingu 27</span>
+        <img src="img/gala_domingo_27.jpg" alt="Cartel Gala Domingu 27 de setiembre de 2026 — Teatru El Llar 25 años">
+        <figcaption>Gala Domingu 27 de setiembre de 2026, 19h
+          <small>Presenta: Pedro Durán · Fai clic na imaxe pa vela en grande</small>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===================== INFO ===================== -->
+  <section id="view-info" class="tab-panel hidden">
+    <div class="info-grid">
+      <div class="info-card ticket">
+        <h3>🎟️ Accesu llibre y gratuitu</h3>
+        <p><span class="hl">Previa retirada d'invitación</span> (un máximu de 4 por persona):</p>
+        <ul>
+          <li><span class="hl">Del mar. 22 al vie. 25 de setiembre</span></li>
+          <li>De <span class="hl">11:00 a 13:00</span> na Conserxería del <span class="hl">Centru Tomás y Valiente</span></li>
+          <li>De <span class="hl">18:00 a 20:30</span> na Conserxería del <span class="hl">Centru Sociocultural de Les Vegues</span></li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>📅 Les dos galas</h3>
+        <ul>
+          <li><span class="hl">Sábadu 26 de setiembre de 2026, 19h</span><br>
+            Presenten: María Cueto (Conexión Asturias, periodista RTPA) y Pedro Durán (showman, actor)
+            <br><button class="btn-mini goto-gala" data-gala="sab" style="margin-top:6px">Ver programa del sábadu →</button>
+          </li>
+          <li><span class="hl">Domingu 27 de setiembre de 2026, 19h</span><br>
+            Presenta: Pedro Durán (actor, showman)
+            <br><button class="btn-mini goto-gala" data-gala="dom" style="margin-top:6px">Ver programa del domingu →</button>
+          </li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>📍 Ónde</h3>
+        <p><span class="hl">Teatru El Llar</span> — Un teatru del pueblu pa la xente.</p>
+        <p style="margin-top:8px">25 años de música, teatru, maxa, danzia, lliteratura y munchu más…</p>
+        <div class="place">
+          <div class="logo-cvn"><span class="ayto">AYUNTAMIENTO</span>CORVERA<br><small>DE ASTURIAS</small></div>
+          <p style="font-size:.85rem">Organiza: Ayuntamiento de Corvera de Asturias<br>Colos carteles oficiales de la Gala de Cumpleañu.</p>
+        </div>
+      </div>
+    </div>
+    <div class="info-slogans">
+      <span class="slogan">“Un teatru del pueblu pa la xente”</span>
+      <span class="slogan">“El teatru también ye tuyu”</span>
+      <span class="slogan">“¿Qué pasa nel Teatru El Llar? ¡¡Lo que tú quieras!!”</span>
+      <span class="slogan">“Cultura · Tradición · Alcuentros · Emociones · Futuru…!!”</span>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <b>Teatru El Llar · 25 años contigu!</b> · Gala de Cumpleañu · 26 y 27 de setiembre de 2026 · 19h<br>
+  Datos estrayíos de los carteles oficiales · Ayuntamiento de Corvera de Asturias · ¡Que viva el teatru! 💜
+</footer>
+
+<div class="overlay hidden" id="overlay">
+  <div class="modal" id="modal" role="dialog" aria-modal="true"></div>
+</div>
+
+<script>
+/* =========================================================
+   DATOS — estrayíos de los dos carteles de la Gala
+   ========================================================= */
+const TIPOS = {
+  tradicional:{label:"Gaita y tradición",      icon:"🎶", color:"#2e7d3a"},
+  banda:      {label:"Bandas y charangas",     icon:"🎺", color:"#c62828"},
+  coral:      {label:"Corales",                icon:"🎼", color:"#6a1b9a"},
+  voz:        {label:"Voz y cantantes",        icon:"🎤", color:"#ad1457"},
+  showman:    {label:"Showman y variedaes",    icon:"🎩", color:"#ef6c00"},
+  magia:      {label:"Maxa",                   icon:"🪄", color:"#283593"},
+  homenaje:   {label:"Homenaxes y orquestes",  icon:"🎻", color:"#8d6e63"},
+  grupo:      {label:"Grupos y espectáculos",  icon:"🎸", color:"#00695c"},
+};
+
+const GALAS = {
+  sab:{id:"sab", dia:"Sábadu 26 de setiembre de 2026", corto:"SÁB 26", hora:"19h",
+       presenten:"María Cueto (Conexión Asturias, periodista RTPA) y Pedro Durán (showman, actor)",
+       empieza:"2026-09-26T19:00:00+02:00"},
+  dom:{id:"dom", dia:"Domingo 27 de setiembre de 2026", corto:"DOM 27", hora:"19h",
+       presenten:"Pedro Durán (actor, showman)",
+       empieza:"2026-09-27T19:00:00+02:00"},
+};
+
+/* orden = númberu nel cartelu; estrella = el cartel lu marca con ★ en vegada de númberu */
+const ACTS = [
+  {id:"mento-hevia", nombre:"Mento Hevia / Orquesta Atlántica", papel:"Homenaxe", tipo:"homenaje",
+   desc:"Homenaxe a Mento Hevia y la Orquesta Atlántica, un clásicu de la música asturiana.",
+   galas:{sab:{orden:1}}},
+  {id:"tina-gutierrez", nombre:"Tina Gutiérrez", papel:"Sopranu", tipo:"voz",
+   desc:"Soprano.",
+   galas:{sab:{orden:2}, dom:{orden:5}}},
+  {id:"banda-musica", nombre:"Banda de Música de Corvera", papel:"Banda de música", tipo:"banda",
+   desc:"La banda de música del conceyu de Corvera.",
+   galas:{sab:{orden:3}, dom:{orden:2}}},
+  {id:"la-caracola", nombre:"La Caracola", papel:"Grupu", tipo:"grupo",
+   desc:"Grupu musical.",
+   galas:{sab:{orden:4}, dom:{orden:6}}},
+  {id:"bras-rodrigo", nombre:"Bras Rodrigo", papel:"Gaiteru", tipo:"tradicional",
+   desc:"Gaiteru.",
+   galas:{sab:{orden:5}, dom:{orden:7}}},
+  {id:"chus-serrano", nombre:"Chus Serrano", papel:"Got Talent", tipo:"showman",
+   desc:"Got Talent.",
+   galas:{sab:{orden:6}}},
+  {id:"coral-canciones", nombre:"Coral de Canciones", papel:"Coral", tipo:"coral",
+   desc:"Coral de canciones.",
+   galas:{sab:{orden:7}, dom:{orden:9}}},
+  {id:"charanga-felechu", nombre:"Charanga El Felechu", papel:"Charanga", tipo:"banda",
+   desc:"Charanga.",
+   galas:{sab:{orden:8}, dom:{orden:11}}},
+  {id:"diego-ocampo", nombre:"Diego Ocampo", papel:"Showman", tipo:"showman",
+   desc:"Showman.",
+   galas:{sab:{orden:9}, dom:{orden:13}}},
+  {id:"jose-armas", nombre:"José Armas", papel:"Magu", tipo:"magia",
+   desc:"Magu (ilusionismu).",
+   galas:{sab:{orden:10}, dom:{orden:14}}},
+  {id:"banda-gaites", nombre:"Banda de Gaites de Corvera", papel:"Banda de gaites", tipo:"tradicional",
+   desc:"La banda de gaites del conceyu. Nel cartelu del domingu cierra'l festival con una estrella ★.",
+   galas:{sab:{orden:11}, dom:{orden:15, estrella:true}}},
+  {id:"odon-paganeu", nombre:"Odón del Paganéu", papel:"Asturianada", tipo:"tradicional",
+   desc:"Asturianada, canción tradicional asturiana.",
+   galas:{dom:{orden:1}}},
+  {id:"anabel-santiago", nombre:"Anabel Santiago", papel:"Cantante", tipo:"voz",
+   desc:"Cantante.",
+   galas:{dom:{orden:3}}},
+  {id:"alberto-rodriguez", nombre:"Alberto Rodríguez", papel:"Showman", tipo:"showman",
+   desc:"Showman.",
+   galas:{dom:{orden:4}}},
+  {id:"mina-longo", nombre:"Mina Longo", papel:"Cantante", tipo:"voz",
+   desc:"Cantante.",
+   galas:{dom:{orden:8}}},
+  {id:"nuberu", nombre:"Nuberu", papel:"Grupu", tipo:"grupo",
+   desc:"Grupu de música asturiana.",
+   galas:{dom:{orden:10}}},
+  {id:"nerea-vazquez", nombre:"Nerea Vázquez", papel:"Cantante", tipo:"voz",
+   desc:"Cantante.",
+   galas:{dom:{orden:12}}},
+];
+
+/* =========================================================
+   ESTAU
+   ========================================================= */
+const state = {q:"", gala:"todes", tipo:"todes", orden:"cartel", vista:"fiches", soloFavs:false, tab:"programa"};
+let favs = new Set();
+try { favs = new Set(JSON.parse(localStorage.getItem("teatru-favs") || "[]")); } catch(e){}
+
+const $ = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+
+function saveFavs(){
+  try { localStorage.setItem("teatru-favs", JSON.stringify([...favs])); } catch(e){}
+}
+function norm(s){
+  return (s||"").toString().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+}
+function enGalas(act){ return Object.keys(act.galas); }
+function enDambas(act){ return enGalas(act).length === 2; }
+
+/* =========================================================
+   FILTROS
+   ========================================================= */
+function filtrar(){
+  const q = norm(state.q).trim();
+  let list = ACTS.filter(act => {
+    // gala
+    const gs = enGalas(act);
+    if(state.gala === "sab" && !act.galas.sab) return false;
+    if(state.gala === "dom" && !act.galas.dom) return false;
+    if(state.gala === "dambas" && !enDambas(act)) return false;
+    if(state.gala === "exclusivos" && enDambas(act)) return false;
+    // tipo
+    if(state.tipo !== "todes" && act.tipo !== state.tipo) return false;
+    // favoritos
+    if(state.soloFavs && !favs.has(act.id)) return false;
+    // búsqueda
+    if(q){
+      const blob = norm([act.nombre, act.papel, act.desc, TIPOS[act.tipo].label,
+        ...gs.map(g => GALAS[g].dia + " " + GALAS[g].corto)].join(" "));
+      if(!blob.includes(q)) return false;
+    }
+    return true;
+  });
+
+  const keyCartel = act => {
+    const s = act.galas.sab ? act.galas.sab.orden : 1000 + (act.galas.dom ? act.galas.dom.orden : 0);
+    return s;
+  };
+  const cmp = {
+    cartel: (a,b) => keyCartel(a) - keyCartel(b),
+    az: (a,b) => a.nombre.localeCompare(b.nombre, "ast"),
+    za: (a,b) => b.nombre.localeCompare(a.nombre, "ast"),
+    tipo: (a,b) => (TIPOS[a.tipo].label.localeCompare(TIPOS[b.tipo].label)) || a.nombre.localeCompare(b.nombre),
+    galas: (a,b) => (enGalas(b).length - enGalas(a).length) || (keyCartel(a) - keyCartel(b)),
+  }[state.orden];
+  list.sort(cmp);
+  return list;
+}
+
+function describirFiltros(){
+  const g = {todes:"todes les galas", sab:"sólo sábadu 26", dom:"sólo domingu 27",
+             dambas:"nes dos galas", exclusivos:"exclusivos d'una gala"}[state.gala];
+  const p = ["gala: " + g];
+  if(state.tipo !== "todes") p.push("tipu: " + TIPOS[state.tipo].label);
+  if(state.q.trim()) p.push("busca: '" + state.q.trim() + "'");
+  if(state.soloFavs) p.push("sólo los meos marcaos");
+  return p.join(" · ");
+}
+
+/* ==PDF-START== */
+/* =========================================================
+   MINI XENERADOR PDF (A4 · Helvetica · WinAnsi, ensin deps)
+   ========================================================= */
+const PDF = (() => {
+  const W = 595.28, H = 841.89, M = 48;
+
+  /* puntos de códigu Unicode → byte WinAnsi (bloque 0x80–0x9F) */
+  const CP1252 = {8364:128,8218:130,402:131,8222:132,8230:133,8224:134,8225:135,710:136,
+                  8240:137,352:138,8249:139,338:140,381:142,8216:145,8217:146,8220:147,
+                  8221:148,8226:149,8211:150,8212:151,732:152,8482:153,353:154,8250:155,
+                  339:156,382:158,376:159};
+  const FALL = {"★":"*","☆":"+","✦":"*","→":"->","←":"<-","⇒":"=>","✓":"[ok]","✔":"[ok]","·":"·"};
+
+  function san(s){
+    let out = "";
+    for (const ch of String(s)) {
+      const c = ch.codePointAt(0);
+      if (c === 9 || c === 10 || c === 13) { out += " "; continue; }
+      if (c < 32) continue;
+      if (c < 256) { out += ch; continue; }
+      if (CP1252[c] !== undefined) { out += String.fromCharCode(CP1252[c]); continue; }
+      if (FALL[ch] !== undefined) { out += FALL[ch]; continue; }
+      if (/[\p{Extended_Pictographic}\uFE0F\u200D]/u.test(ch)) continue;
+      out += "?";
+    }
+    return out;
+  }
+  function esc(s){ return san(s).replace(/([\\()])/g, "\\$1"); }
+  function n(v){ return String(Math.round(v * 100) / 100); }
+
+  const NARROW = "ijlt.,;:!|'()[]{}*";
+  const FRLIKE = "fr-/\"\\";
+  const WIDE = "mwMW@%&#";
+  function sw(s, size, bold){
+    let w = 0;
+    for (const ch of san(s)) {
+      let cw = 500;
+      if (ch === " ") cw = 278;
+      else if (NARROW.includes(ch)) cw = 260;
+      else if (FRLIKE.includes(ch)) cw = 350;
+      else if (WIDE.includes(ch)) cw = 840;
+      else if (ch >= "A" && ch <= "Z") cw = 700;
+      else if (ch >= "a" && ch <= "z") cw = 545;
+      else if (ch >= "0" && ch <= "9") cw = 556;
+      w += cw;
+    }
+    return (w / 1000) * size * (bold ? 1.05 : 1);
+  }
+  function wrap(s, size, bold, maxW){
+    const words = String(s).split(/\s+/).filter(Boolean);
+    const lines = []; let cur = "";
+    for (const wd of words) {
+      const t = cur ? cur + " " + wd : wd;
+      if (sw(t, size, bold) <= maxW) cur = t;
+      else { if (cur) lines.push(cur); cur = wd; }
+    }
+    if (cur) lines.push(cur);
+    return lines.length ? lines : [""];
+  }
+
+  function build(pages, title){
+    const objs = [];
+    objs.push("<< /Type /Catalog /Pages 2 0 R >>");                                             // 1
+    objs.push(null);                                                                            // 2 (pages)
+    objs.push("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>");           // 3 F1
+    objs.push("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>");      // 4 F2
+    objs.push("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>");   // 5 F3
+    objs.push("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-BoldOblique /Encoding /WinAnsiEncoding >>"); // 6 F4
+    objs.push("<< /Title (" + esc(title) + ") /Producer (teatru-ellar-25) /Creator (teatru-ellar-25 app) >>"); // 7 Info
+    const kids = [];
+    for (const p of pages) {
+      const pid = objs.length + 1;
+      kids.push(pid);
+      objs.push(null);
+      const cid = objs.length + 1;
+      const stream = p.frags.join("\n");
+      objs.push("<< /Length " + stream.length + " >>\nstream\n" + stream + "\nendstream");
+      objs[pid - 1] = "<< /Type /Page /Parent 2 0 R /MediaBox [0 0 " + n(W) + " " + n(H) +
+        "] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents " + cid + " 0 R >>";
+    }
+    objs[1] = "<< /Type /Pages /Kids [" + kids.map(id => id + " 0 R").join(" ") + "] /Count " + pages.length + " >>";
+    let out = "%PDF-1.4\n%\u00E2\u00E3\u00CF\u00D3\n";
+    const offsets = [];
+    objs.forEach((body, i) => {
+      offsets.push(out.length);
+      out += (i + 1) + " 0 obj\n" + body + "\nendobj\n";
+    });
+    const xrefPos = out.length;
+    out += "xref\n0 " + (objs.length + 1) + "\n0000000000 65535 f \n";
+    offsets.forEach(off => { out += String(off).padStart(10, "0") + " 00000 n \n"; });
+    out += "trailer\n<< /Size " + (objs.length + 1) + " /Root 1 0 R /Info 7 0 R >>\nstartxref\n" + xrefPos + "\n%%EOF";
+    const bytes = new Uint8Array(out.length);
+    for (let i = 0; i < out.length; i++) bytes[i] = out.charCodeAt(i) & 0xFF;
+    return bytes;
+  }
+
+  function create(){
+    const pages = [];
+    let cur = null, y = 0;
+    function np(){ cur = { frags: [] }; pages.push(cur); y = H - M; }
+    np();
+    const frag = s => cur.frags.push(s);
+    const FONT = { b:"/F2", r:"/F1", i:"/F3", bi:"/F4" };
+    const api = {
+      W, H, M,
+      get y(){ return y; },
+      set y(v){ y = v; },
+      newPage(){ np(); },
+      ensure(h){ if (y - h < 74) { np(); return true; } return false; },
+      rect(x, yy, w, h, fill){
+        frag(n(fill[0]) + " " + n(fill[1]) + " " + n(fill[2]) + " rg " + n(x) + " " + n(yy) + " " + n(w) + " " + n(h) + " re f");
+      },
+      circle(x, yy, r, fill){
+        const k = 0.5523 * r;
+        frag(n(fill[0]) + " " + n(fill[1]) + " " + n(fill[2]) + " rg " +
+          n(x + r) + " " + n(yy) + " m " +
+          n(x + r) + " " + n(yy + k) + " " + n(x + k) + " " + n(yy + r) + " " + n(x) + " " + n(yy + r) + " c " +
+          n(x - k) + " " + n(yy + r) + " " + n(x - r) + " " + n(yy + k) + " " + n(x - r) + " " + n(yy) + " c " +
+          n(x - r) + " " + n(yy - k) + " " + n(x - k) + " " + n(yy - r) + " " + n(x) + " " + n(yy - r) + " c " +
+          n(x + k) + " " + n(yy - r) + " " + n(x + r) + " " + n(yy - k) + " " + n(x + r) + " " + n(yy) + " c f");
+      },
+      line(x1, y1, x2, y2, color, w){
+        frag(n(color[0]) + " " + n(color[1]) + " " + n(color[2]) + " RG " + n(w || 0.8) + " w " +
+          n(x1) + " " + n(y1) + " m " + n(x2) + " " + n(y2) + " l S");
+      },
+      text(str, x, yy, o){
+        o = o || {};
+        const size = o.size || 10, bold = !!o.bold, italic = !!o.italic;
+        const font = bold ? (italic ? FONT.bi : FONT.b) : (italic ? FONT.i : FONT.r);
+        const c = o.color || [0.16, 0.13, 0.10];
+        let tx = x;
+        if (o.align === "center") tx = x - sw(str, size, bold) / 2;
+        else if (o.align === "right") tx = x - sw(str, size, bold);
+        frag("BT " + font + " " + n(size) + " Tf " + n(c[0]) + " " + n(c[1]) + " " + n(c[2]) +
+          " rg " + n(tx) + " " + n(yy) + " Tm (" + esc(str) + ") Tj ET");
+        return sw(str, size, bold);
+      },
+      para(str, x, yy, maxW, o){
+        o = o || {};
+        const size = o.size || 10, lead = o.lead || size * 1.32;
+        const lines = wrap(str, size, !!o.bold, maxW);
+        let cy = yy;
+        for (const ln of lines) { api.text(ln, x, cy, o); cy -= lead; }
+        return cy;
+      },
+      save(name, footerText){
+        const total = pages.length;
+        pages.forEach((p, i) => {
+          cur = p;
+          api.line(M, 58, W - M, 58, [0.85, 0.78, 0.60], 0.6);
+          api.text(footerText, M, 44, { size: 7.5, color: [0.45, 0.40, 0.34] });
+          api.text("Páxina " + (i + 1) + " de " + total, W - M, 44, { size: 7.5, align: "right", color: [0.45, 0.40, 0.34] });
+        });
+        const bytes = build(pages, name.replace(/\.pdf$/i, ""));
+        const blob = new Blob([bytes], { type: "application/pdf" });
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = name;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+      },
+      wrap, sw, san
+    };
+    return api;
+  }
+
+  return { create, W, H, M };
+})();
+
+/* Convierte "#rrggbb" nuna tupla RGB 0–1 */
+function rgb(hex){
+  const v = parseInt(hex.slice(1), 16);
+  return [((v >> 16) & 255) / 255, ((v >> 8) & 255) / 255, (v & 255) / 255];
+}
+
+/* =========================================================
+   EXPORTAR EL PROGRAMA (colos filtros actuales) A PDF
+   ========================================================= */
+function exportPDF(){
+  const list = filtrar();
+  if (!list.length) {
+    openMsgModal("Nun hai nada qu'esportar",
+      "Colos filtros actuales nun queda nenguna actuación. Prueba a llimpiar los filtros y vuelve a intentalo.");
+    return;
+  }
+  const d = PDF.create();
+  const PURPLE = [0.36, 0.16, 0.52], RED = [0.78, 0.16, 0.16], GOLD = [0.90, 0.70, 0.15],
+        INK = [0.16, 0.13, 0.10], GRAY = [0.42, 0.38, 0.33], WHITE = [1, 1, 1];
+  const CW = d.W - 2 * d.M;
+
+  /* -- cabecera -- */
+  d.rect(0, d.y - 40, d.W, 40 + d.M, PURPLE);
+  d.text("TEATRU EL LLAR · 25 AÑOS CONTIGU!", d.W / 2, d.y - 20, { size: 17, bold: true, color: WHITE, align: "center" });
+  d.text("GALA DE CUMPLEAÑU · CORVERA DE ASTURIAS", d.W / 2, d.y - 35, { size: 8.5, color: GOLD, align: "center" });
+  d.y -= 40 + 20;
+
+  d.text("Sábadu 26 y Domingu 27 de setiembre de 2026 · 19h · Teatru El Llar", d.W / 2, d.y, { size: 10.5, bold: true, color: INK, align: "center" });
+  d.y -= 15;
+  const nf = list.length, ni = list.reduce((n2, a) => n2 + enGalas(a).length, 0);
+  const ahora = new Date().toLocaleString("es-ES", { dateStyle: "short", timeStyle: "short" });
+  d.y = d.para("Programa colos filtros actuales — " + describirFiltros() +
+    " · " + nf + " actuación" + (nf === 1 ? "" : "s") + " · " + ni + " intervención" + (ni === 1 ? "" : "s") +
+    " · xportáu'l " + ahora, d.M, d.y, CW, { size: 8, color: GRAY, lead: 10.5, align: "left" });
+  d.y -= 6;
+
+  /* -- secciones por gala (mesmu criteriu que la vista cartelera) -- */
+  const secs = [];
+  if (state.gala !== "dom") secs.push("sab");
+  if (state.gala !== "sab") secs.push("dom");
+
+  for (const g of secs) {
+    const G = GALAS[g];
+    const items = list.filter(a => a.galas[g]).sort((a, b) => a.galas[g].orden - b.galas[g].orden);
+    d.ensure(130);
+    d.y -= 4;
+    const col = g === "sab" ? RED : PURPLE;
+    d.rect(d.M, d.y - 17, CW, 17, col);
+    d.text("GALA " + G.dia.toUpperCase() + " · " + G.hora, d.M + 8, d.y - 12.5, { size: 10, bold: true, color: WHITE });
+    d.text(items.length + " actuación" + (items.length === 1 ? "" : "s"), d.W - d.M - 8, d.y - 12, { size: 8, color: WHITE, align: "right" });
+    d.y -= 17 + 13;
+    d.y = d.para("Presenta" + (g === "sab" ? "n" : "") + ": " + G.presenten, d.M + 2, d.y, CW, { size: 8.5, italic: true, color: GRAY, lead: 11 });
+    d.y -= 3;
+
+    for (const act of items) {
+      const info = act.galas[g], t = TIPOS[act.tipo];
+      d.ensure(32);
+      const cy = d.y - 8;
+      const c = info.estrella ? GOLD : rgb(t.color);
+      d.circle(d.M + 9, cy, 8.6, c);
+      d.text(info.estrella ? "*" : String(info.orden), d.M + 9, cy - 2.8, {
+        size: 8, bold: true, align: "center", color: info.estrella ? INK : WHITE
+      });
+      d.text(act.nombre, d.M + 28, d.y - 4, { size: 10.5, bold: true, color: INK });
+      const extra = info.estrella ? " · pieza de zarru ★ del cartelu"
+                  : (enDambas(act) ? " · nes dos galas" : " · exclusivu d'esta gala");
+      d.text(act.papel + " · " + t.label + extra, d.M + 28, d.y - 15, { size: 8, color: GRAY });
+      d.y -= 27;
+    }
+    d.y -= 6;
+  }
+
+  /* -- nota final -- */
+  d.ensure(44);
+  d.line(d.M, d.y + 4, d.W - d.M, d.y + 4, [0.85, 0.78, 0.60], 0.8);
+  d.y -= 6;
+  d.y = d.para("Accesu llibre y gratuitu previa retirada d'invitación (máximu de 4 por persona): " +
+    "del mar. 22 al vie. 25 de setiembre, de 11:00 a 13:00 na Conserxería del Centru Tomás y Valiente " +
+    "y de 18:00 a 20:30 na Conserxería del Centru Sociocultural de Les Vegues.", d.M, d.y, CW,
+    { size: 8, color: GRAY, lead: 10.5 });
+  d.para("★ = pieza marcada con estrella nel cartelu del domingu. Datos estrayíos de los carteles oficiales.", d.M, d.y, CW, { size: 7.5, italic: true, color: GRAY, lead: 10 });
+
+  d.save("programa-teatru-el-llar-25.pdf",
+    "Teatru El Llar · 25 Años Contigu! · Gala de Cumpleañu · ¡Que viva el teatru!");
+}
+/* ==PDF-END== */
+
+/* =========================================================
+   RENDER
+   ========================================================= */
+function badgesHTML(act){
+  let h = "";
+  for(const g of ["sab","dom"]){
+    const info = act.galas[g];
+    if(!info) continue;
+    const etq = info.estrella ? "★" : "nº " + info.orden;
+    h += `<span class="badge ${g}">${GALAS[g].corto} · ${etq}</span>`;
+  }
+  if(enDambas(act)) h += `<span class="badge both">¡Nes dos!</span>`;
+  else h += `<span class="badge excl">Exclusivu</span>`;
+  return h;
+}
+
+function cardHTML(act){
+  const t = TIPOS[act.tipo];
+  const fav = favs.has(act.id) ? "on" : "";
+  return `
+  <article class="card" data-id="${act.id}" style="--tipo:${t.color}">
+    <div class="card-badges">${badgesHTML(act)}</div>
+    <h3>${act.nombre}</h3>
+    <p class="papel">${act.papel}</p>
+    <p class="desc">${act.desc}</p>
+    <div class="card-foot">
+      <span class="tag">${t.icon} ${t.label}</span>
+      <div class="card-actions">
+        <button class="icon-btn fav-btn ${fav}" data-fav="${act.id}" title="Marcar como favoritu">${fav ? "★" : "☆"}</button>
+        <button class="btn-mini info-btn" data-id="${act.id}">Info +</button>
+      </div>
+    </div>
+  </article>`;
+}
+
+function carteleraHTML(list, galaId){
+  const g = GALAS[galaId];
+  const items = list.filter(a => a.galas[galaId])
+                    .sort((a,b) => a.galas[galaId].orden - b.galas[galaId].orden);
+  const rows = items.map(act => {
+    const info = act.galas[galaId];
+    const t = TIPOS[act.tipo];
+    const etq = info.estrella ? "★" : info.orden;
+    return `
+    <li data-id="${act.id}" style="--tipo:${t.color}">
+      <span class="order ${info.estrella ? "star" : ""}">${etq}</span>
+      <span>
+        <div class="nm">${act.nombre}${favs.has(act.id) ? " ★" : ""}</div>
+        <div class="pp">${act.papel} · ${t.icon} ${t.label}</div>
+      </span>
+    </li>`;
+  }).join("");
+  return `
+  <div class="day-col ${galaId}">
+    <div class="day-head">
+      <h3>${g.dia} · ${g.hora}</h3>
+      <div class="meta">${items.length} actuación${items.length===1?"":"s"} nel programa</div>
+      <div class="pres">🎤 Presenta${galaId==="sab"?"n":""}: ${g.presenten}</div>
+    </div>
+    <ul class="day-list">${rows || `<div class="day-empty">Nun queda nenguna actuación con estos filtros.</div>`}</ul>
+  </div>`;
+}
+
+function render(){
+  const list = filtrar();
+
+  /* --- conteos --- */
+  const totalInterv = list.reduce((n,a) => n + enGalas(a).length, 0);
+  $("#count-bar").innerHTML = `
+    <span><b>${list.length}</b> actuación${list.length===1?"":"s"}</span>
+    <span><b>${totalInterv}</b> intervención${totalInterv===1?"":"s"} ente les dos galas</span>
+    <span>· <b>${list.filter(enDambas).length}</b> nes dos galas · <b>${list.filter(a=>!enDambas(a)).length}</b> exclusivos</span>`;
+
+  /* --- fiches / cartelera --- */
+  const fiches = $("#fiches"), cartelera = $("#cartelera"), empty = $("#empty");
+  if(list.length === 0){
+    fiches.classList.add("hidden"); cartelera.classList.add("hidden"); empty.classList.remove("hidden");
+    return;
+  }
+  empty.classList.add("hidden");
+  if(state.vista === "fiches"){
+    fiches.classList.remove("hidden"); cartelera.classList.add("hidden");
+    fiches.innerHTML = list.map(cardHTML).join("");
+  }else{
+    fiches.classList.add("hidden"); cartelera.classList.remove("hidden");
+    let cols = "";
+    if(state.gala !== "dom") cols += carteleraHTML(list, "sab");
+    if(state.gala !== "sab") cols += carteleraHTML(list, "dom");
+    cartelera.innerHTML = cols;
+  }
+}
+
+function renderHeroStats(){
+  const interv = ACTS.reduce((n,a) => n + enGalas(a).length, 0);
+  $("#hero-stats").innerHTML = `
+    <span class="stat">🎭 <b>2</b> galas</span>
+    <span class="stat">🎤 <b>${ACTS.length}</b> actuaciones</span>
+    <span class="stat">🌟 <b>${interv}</b> intervenciones</span>
+    <span class="stat">📅 26–27 set 2026 · <b>19h</b></span>
+    <span class="stat">🎟️ Accesu llibre con invitación</span>`;
+}
+
+/* =========================================================
+   CUENTA ATRÁS
+   ========================================================= */
+const GALA_MS = 3 * 3600 * 1000; /* duración encesitada pa considerar "en gala" */
+
+function tickCountdown(){
+  const now = Date.now();
+  const cd = $("#countdown"), mini = $("#cd-mini");
+  const starts = ["sab","dom"].map(g => Date.parse(GALAS[g].empieza));
+  const nombres = ["Sábadu 26 de setiembre", "Domingu 27 de setiembre"];
+
+  const live = starts.findIndex(t => now >= t && now < t + GALA_MS);
+  const next = starts.findIndex(t => now < t);
+
+  const pill = live !== -1
+    ? `<div class="cd-live">🎭 ¡AGORA MESMU EN GALE! · ${nombres[live].toUpperCase()}</div>`
+    : "";
+
+  if (next === -1){
+    if (live === -1){
+      cd.innerHTML = `<div class="cd-label">🎉 La fiesta ya se celebró</div>
+        <div class="cd-boxes"><div class="cd-box" style="min-width:250px">
+        <b style="font-size:1.1rem;padding-top:6px">¡Gracies a toos!</b><span>¡Que viva el teatru!</span></div></div>`;
+      mini.innerHTML = "🎉 ¡25 años cumplíos!";
+      mini.classList.remove("live");
+      return;
+    }
+    cd.innerHTML = pill;
+    mini.innerHTML = "🔴 ¡EN GALE!";
+    mini.classList.add("live");
+    return;
+  }
+
+  let diff = starts[next] - now;
+  const dd = Math.floor(diff / 86400000); diff -= dd * 86400000;
+  const hh = Math.floor(diff / 3600000);  diff -= hh * 3600000;
+  const mm = Math.floor(diff / 60000);    diff -= mm * 60000;
+  const ss = Math.floor(diff / 1000);
+  const p2 = v => String(v).padStart(2, "0");
+
+  const etiqueta = (live !== -1 && next !== -1)
+    ? `⏳ Y falta pa la Gala del ${nombres[next]} · 19h`
+    : `⏳ Falta pa la Gala del ${nombres[next]} · 19h`;
+  cd.innerHTML = pill + `
+    <div class="cd-label">${etiqueta}</div>
+    <div class="cd-boxes">
+      <div class="cd-box"><b>${dd}</b><span>díes</span></div>
+      <div class="cd-box"><b>${p2(hh)}</b><span>hores</span></div>
+      <div class="cd-box"><b>${p2(mm)}</b><span>min</span></div>
+      <div class="cd-box"><b>${p2(ss)}</b><span>seg</span></div>
+    </div>`;
+  mini.innerHTML = (live !== -1 ? "🔴 + " : "") + `⏳ <b>${dd}d</b> ${p2(hh)}h ${p2(mm)}m ${p2(ss)}s`;
+  mini.classList.toggle("live", live !== -1);
+}
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+const overlay = $("#overlay"), modal = $("#modal");
+
+function openActModal(act){
+  const t = TIPOS[act.tipo];
+  const rows = ["sab","dom"].filter(g => act.galas[g]).map(g => {
+    const info = act.galas[g], G = GALAS[g];
+    const etq = info.estrella ? "★ pieza estrella del cartelu" : "nº " + info.orden + " del programa";
+    return `
+    <li style="--tipo:${t.color}">
+      <span class="order ${info.estrella ? "star" : ""}" style="background:${info.estrella ? "var(--gold)" : t.color};color:${info.estrella ? "#3a2c05" : "#fff"}">${info.estrella ? "★" : info.orden}</span>
+      <span>
+        <div class="nm">${G.dia} · ${G.hora}</div>
+        <div class="pp">${etq} · Presenta${g==="sab"?"n":""}: ${G.presenten}</div>
+      </span>
+    </li>`;
+  }).join("");
+  const fav = favs.has(act.id);
+  modal.innerHTML = `
+    <button class="close" id="modal-close" aria-label="Zarrar">✕</button>
+    <h2>${act.nombre}</h2>
+    <p class="papel">${act.papel}</p>
+    <div class="modal-badges">
+      <span class="tag" style="--tipo:${t.color}">${t.icon} ${t.label}</span>
+      ${badgesHTML(act)}
+    </div>
+    <p class="desc">${act.desc}</p>
+    <h4>¿Cuándo actúa?</h4>
+    <ul class="act-list">${rows}</ul>
+    <h4>Entrada</h4>
+    <p class="desc">Accesu llibre y gratuitu previa retirada d'invitación (máximu 4 por persona), del mar. 22 al vie. 25 de setiembre.</p>
+    <div class="modal-foot">
+      <button class="btn btn-purple" id="modal-fav" data-fav="${act.id}">${fav ? "★ Marcáu" : "☆ Marcar"}</button>
+      <button class="btn btn-outline" id="modal-close-2">Zarrar</button>
+    </div>`;
+  showOverlay();
+}
+
+function openImgModal(src, alt){
+  modal.innerHTML = `
+    <button class="close" id="modal-close" aria-label="Zarrar">✕</button>
+    <h2 style="font-size:1.1rem;margin-bottom:12px">${alt}</h2>
+    <img class="lightbox-img" src="${src}" alt="${alt}">`;
+  showOverlay();
+}
+
+function openMsgModal(titulo, cuerpo){
+  modal.innerHTML = `
+    <button class="close" id="modal-close" aria-label="Zarrar">✕</button>
+    <h2>${titulo}</h2>
+    <p class="desc" style="margin-top:14px">${cuerpo}</p>
+    <div class="modal-foot">
+      <button class="btn btn-outline" id="modal-close-2">Zarrar</button>
+    </div>`;
+  showOverlay();
+}
+
+function showOverlay(){
+  overlay.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+}
+function closeModal(){
+  overlay.classList.add("hidden");
+  document.body.style.overflow = "";
+}
+overlay.addEventListener("click", e => { if(e.target === overlay) closeModal(); });
+document.addEventListener("keydown", e => {
+  if(e.key === "Escape") closeModal();
+  if(e.key === "/" && overlay.classList.contains("hidden") &&
+     !["INPUT","SELECT","TEXTAREA"].includes(document.activeElement.tagName)){
+    e.preventDefault(); $("#q").focus();
+  }
+});
+modal.addEventListener("click", e => {
+  if(e.target.closest("#modal-close, #modal-close-2")) closeModal();
+  const favBtn = e.target.closest("[data-fav]");
+  if(favBtn){ toggleFav(favBtn.dataset.fav); closeModal(); }
+});
+
+/* =========================================================
+   FAVORITOS
+   ========================================================= */
+function toggleFav(id){
+  if(favs.has(id)) favs.delete(id); else favs.add(id);
+  saveFavs();
+  render();
+}
+
+/* =========================================================
+   EVENTS
+   ========================================================= */
+function mostrarTab(tab){
+  state.tab = tab;
+  $$(".tab-btn").forEach(b => b.classList.toggle("active", b.dataset.tab === tab));
+  $$(".tab-panel").forEach(p => p.classList.toggle("hidden", p.id !== "view-" + tab));
+}
+$$(".tab-btn").forEach(btn => btn.addEventListener("click", () => {
+  mostrarTab(btn.dataset.tab);
+  window.scrollTo({top:0, behavior:"smooth"});
+}));
+
+/* búsqueda */
+$("#q").addEventListener("input", e => {
+  state.q = e.target.value;
+  $("#q-clear").classList.toggle("hidden", !state.q);
+  render();
+});
+$("#q-clear").addEventListener("click", () => {
+  state.q = ""; $("#q").value = ""; $("#q-clear").classList.add("hidden"); render(); $("#q").focus();
+});
+
+/* desplegables */
+$("#sel-gala").addEventListener("change", e => setGala(e.target.value));
+$("#sel-tipo").addEventListener("change", e => { state.tipo = e.target.value; render(); });
+$("#sel-orden").addEventListener("change", e => { state.orden = e.target.value; render(); });
+
+function setGala(v){
+  state.gala = v;
+  $("#sel-gala").value = v;
+  $$("#chips-gala .chip").forEach(c => c.classList.toggle("active", c.dataset.gala === v));
+  render();
+}
+$$("#chips-gala .chip").forEach(c => c.addEventListener("click", () => setGala(c.dataset.gala)));
+
+/* vista */
+$$("[data-vista]").forEach(c => c.addEventListener("click", () => {
+  state.vista = c.dataset.vista;
+  $$("[data-vista]").forEach(x => x.classList.toggle("active", x === c));
+  render();
+}));
+
+/* favoritos filtro + limpiar + pdf + imprimir */
+$("#btn-favs").addEventListener("click", () => {
+  state.soloFavs = !state.soloFavs;
+  $("#btn-favs").classList.toggle("active", state.soloFavs);
+  render();
+});
+function limpiar(){
+  state.q = ""; state.gala = "todes"; state.tipo = "todes"; state.orden = "cartel"; state.soloFavs = false;
+  $("#q").value = ""; $("#q-clear").classList.add("hidden");
+  $("#sel-gala").value = "todes"; $("#sel-tipo").value = "todes"; $("#sel-orden").value = "cartel";
+  $("#btn-favs").classList.remove("active");
+  $$("#chips-gala .chip").forEach(c => c.classList.toggle("active", c.dataset.gala === "todes"));
+  render();
+}
+$("#btn-limpiar").addEventListener("click", limpiar);
+$("#btn-empty-reset").addEventListener("click", limpiar);
+$("#btn-print").addEventListener("click", () => window.print());
+$("#btn-pdf").addEventListener("click", exportPDF);
+
+/* cards + lista cartelera */
+document.addEventListener("click", e => {
+  const favBtn = e.target.closest(".fav-btn");
+  if(favBtn){ e.stopPropagation(); toggleFav(favBtn.dataset.fav); return; }
+  const card = e.target.closest(".card, .day-list li");
+  if(card && card.dataset.id){
+    const act = ACTS.find(a => a.id === card.dataset.id);
+    if(act) openActModal(act);
+  }
+});
+
+/* carteles: conmutador + lightbox */
+$$("[data-poster]").forEach(c => c.addEventListener("click", () => {
+  const v = c.dataset.poster;
+  $$("[data-poster]").forEach(x => x.classList.toggle("active", x === c));
+  $("#poster-sab").classList.toggle("hidden", v === "dom");
+  $("#poster-dom").classList.toggle("hidden", v === "sab");
+}));
+$$("#view-carteles img").forEach(img => img.addEventListener("click", () => {
+  const cap = img.closest("figure").querySelector("figcaption").childNodes[0].textContent.trim();
+  openImgModal(img.src, cap);
+}));
+
+/* botones "ver programa de la gala" na info */
+$$(".goto-gala").forEach(b => b.addEventListener("click", () => {
+  setGala(b.dataset.gala);
+  mostrarTab("programa");
+  window.scrollTo({top:0, behavior:"smooth"});
+}));
+
+/* init: ?tab=programa|carteles|info (deep-links del manifest) */
+const qs = new URLSearchParams(location.search).get("tab");
+if(["programa","carteles","info"].includes(qs)) mostrarTab(qs);
+renderHeroStats();
+render();
+tickCountdown();
+setInterval(tickCountdown, 1000);
+</script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3efc2497f174e84',t:'MTc5MDA2Mzg0Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
